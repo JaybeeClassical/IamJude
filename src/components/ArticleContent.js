@@ -1,10 +1,12 @@
 import React from 'react';
 import TagList from './TagList';
 import { Helmet } from 'react-helmet'
+import { DiscussionEmbed } from 'disqus-react';
 
 import { documentToReactComponents } from '@contentful/rich-text-react-renderer';
 import { BLOCKS } from '@contentful/rich-text-types';
 import { Link, graphql } from 'gatsby';
+import { FaSignLanguage } from 'react-icons/fa';
 
 function ArticleContent(props) {
 
@@ -38,6 +40,12 @@ function ArticleContent(props) {
             [BLOCKS.EMBEDDED_ASSET]: (node, children) => <Image node={node} />
         }
     };
+
+    //the discuss 
+    const disqusConfig = {
+        shortname: process.env.GATSBY_DISQUS_NAME,
+        config: { identifier: title },
+    }
 
     //For Better TimeStamp
     function getMonth(month) {
@@ -112,13 +120,14 @@ function ArticleContent(props) {
                 </div>
                 <hr className="bg-light" />
                 <div>
-                    <span className="font-italic h5">Published {getTimestamp(timeStamp)} </span>
-                    <br />
-                    <br />
-                    Tagged with
+                    Tags
                     {/* <TagList data={tag} /> */}
-                    Note : These are the random articles took from Medium
+                    <br />
+                    <br />
+                    <span className="font-italic h5">Published {getTimestamp(timeStamp)} </span>
                 </div>
+                <DiscussionEmbed {...disqusConfig} />
+
             </div>
         </div>
 

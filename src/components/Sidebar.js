@@ -12,7 +12,7 @@ const Sidebar = ({ data }) => {
                 width="180"
                 className="rounded-circle mb-5 profile-img"
                 alt="profile"
-                src="https://images2.jiji.ng/29921708_me_475x479.jpg" />
+                src="https://pbs.twimg.com/profile_images/1115179633081815040/H7m30Dph_400x400.jpg" />
             <h2>{title}</h2>
             <p>{info}</p>
             <SocialLinks socialLinks={socialLinks} />

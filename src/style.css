@@ -89,10 +89,12 @@ body p {
         visibility: hidden;
     }
 
-  
+    .profile-img {
+        margin-left: 100px;
+    }
 
     .icon{
-        margin-left: 20px;
+        margin-left: 10px;
     }
     .sidebar {
         width: auto;

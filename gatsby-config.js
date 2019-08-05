@@ -43,5 +43,7 @@ module.exports = {
     // `@contentful/rich-text-react-renderer`
 
 
+
+
   ],
 }
