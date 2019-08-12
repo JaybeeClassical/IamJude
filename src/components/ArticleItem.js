@@ -1,7 +1,7 @@
 import React from 'react'
 import { Link } from 'gatsby';
 
-const ArticleItem = ({ title, description, slug, commentCount }) => {
+const ArticleItem = ({ title, description, slug }) => {
 
     const commentIcon = "https://img.icons8.com/material-sharp/24/80CBC4/speech-bubble-with-dots.png"
 
@@ -11,7 +11,7 @@ const ArticleItem = ({ title, description, slug, commentCount }) => {
                 <h2>{title}</h2>
             </Link>
             <p>{description}</p>
-            <span><img src={commentIcon} alt="Comment Icon" className="mr-2" />{commentCount} Comments</span>
+            <span><img src={commentIcon} alt="Comment Icon" className="mr-2" /> Comments</span>
         </div>
     )
 }

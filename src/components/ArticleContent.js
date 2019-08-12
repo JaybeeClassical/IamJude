@@ -112,7 +112,7 @@ function ArticleContent(props) {
                 <title>{title}</title>
             </Helmet>
             <div className="article-content">
-                <span className="display-4">{title}</span>
+                <span className="display-4"><h2>{title}</h2></span>
                 <div className="mt-5">
                     {
                         documentToReactComponents(richTextDocument, options)
