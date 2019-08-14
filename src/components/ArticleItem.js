@@ -7,11 +7,14 @@ const ArticleItem = ({ title, description, slug }) => {
 
     return (
         <div className="article-item mb-4">
+            <hr className="bg-info" />
+
             <Link to={slug} className="link">
                 <h2>{title}</h2>
             </Link>
             <p>{description}</p>
             <span><img src={commentIcon} alt="Comment Icon" className="mr-2" /> Comments</span>
+            <hr className="bg-info" />
         </div>
     )
 }

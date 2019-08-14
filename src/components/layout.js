@@ -10,7 +10,8 @@ function Layout({ children }) {
             "twitter": "https://twitter.com/Chinweike_Dev",
             "github": "https://github.com/JaybeeClassical",
             "meduim": "https://medium.com/@johnboscoobiejesi",
-            "gmail": "https://mail.google.com/mail/u/0/#inbox"
+            "gmail": "https://mail.google.com/mail/u/0/#inbox",
+            "stackoverflow": "https://stackoverflow.com/users/10690238/jude-obiejesi"
         }
     }
     return (
@@ -18,8 +19,6 @@ function Layout({ children }) {
             <div className="row">
                 <div className="col">
                     <Sidebar data={data} />
-                    <div className="vertical-line"></div>
-                    <hr />
                 </div>
                 <div className="col-lg-8">
                     <div className="articles my-5">

@@ -118,7 +118,6 @@ function ArticleContent(props) {
                         documentToReactComponents(richTextDocument, options)
                     }
                 </div>
-                <hr className="bg-light" />
                 <div>
                     Tags
                     {/* <TagList data={tag} /> */}

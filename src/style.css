@@ -11,12 +11,10 @@ body p {
 }
 
 .sidebar {
-    position: fixed;
-    height: 100%;
-    width: 400px;
-    z-index: 1;
-    overflow-x: hidden;
+    text-align: center;
+    justify-content: center;
 }
+
 
 .sidebar h2 {
     font-weight: 700;
@@ -24,32 +22,20 @@ body p {
     text-align: center;
 }
 
-.sidebar hr{
-    visibility: hidden;
-}
 
 .profile-img {
     border: 5px solid #FFF;
-    margin-left: 90px;
+    margin-left: 30px;
 }
 
 .icon {
-    font-size: 40px;
+    font-size: 30px;
     color: rgb(107, 216, 207);
-    margin-right: 30px
+    margin-right: 20px
 }
 
 .icon:hover {
-    color: #80CBC4
-}
-
-.vertical-line {
-    margin-top: 50px;
-    margin-left: 60px;
-    width: 100%;
-    height: 500px;
-    border-right: 2px solid rgb(226, 174, 76);
-    opacity: 2;
+    color: rgb(204, 207, 209)
 }
 
 .articles {
@@ -87,26 +73,12 @@ body p {
 }
 
 @media only screen and (max-width: 600px) {
-    .vertical-line {
-        margin: 0;
-        opacity: 0;
-        visibility: hidden;
-    }
-
     .profile-img {
         margin-left: 40px;
     }
 
     .icon{
         margin-left: 10px;
-    }
-    .sidebar {
-        width: auto;
-        position: absolute;
-    }
-
-    .sidebar hr {
-        visibility: visible;
     }
 
     .articles {

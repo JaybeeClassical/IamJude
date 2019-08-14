@@ -19,6 +19,7 @@ module.exports = {
         path: `${__dirname}/src/images`,
       },
     },
+    `gatsby-plugin-offline`,
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
     {
@@ -43,7 +44,13 @@ module.exports = {
     // `@contentful/rich-text-react-renderer`
 
 
-
+    // `Disqus plugin`
+    {
+      resolve: `gatsby-plugin-disqus`,
+      options: {
+        shortname: `iamjude.xyz`
+      }
+    },
 
   ],
 }

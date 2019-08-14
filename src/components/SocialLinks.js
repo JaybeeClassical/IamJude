@@ -1,5 +1,5 @@
 import React from 'react'
-import { FaFacebook as Facebook, FaTwitter as Twitter, FaGithub as Github, FaMedium as Meduim, FaEnvelope as Gmail } from 'react-icons/fa';
+import { FaFacebook as Facebook, FaTwitter as Twitter, FaGithub as Github, FaMedium as Meduim, FaEnvelope as Gmail, FaStackOverflow as Stackoverflow } from 'react-icons/fa';
 
 function SocialLinks({ socialLinks }) {
     return (
@@ -9,6 +9,8 @@ function SocialLinks({ socialLinks }) {
             <a className="icon" href={socialLinks.github}><Github /></a>
             <a className="icon" href={socialLinks.meduim}><Meduim /></a>
             <a className="icon" href={socialLinks.gmail}><Gmail /></a>
+            <a className="icon" href={socialLinks.stackoverflow}><Stackoverflow /></a>
+
         </div>
     )
 }
