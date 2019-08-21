@@ -1,9 +1,6 @@
 import React from 'react'
 import SocialLinks from './SocialLinks'
 import { Link } from 'gatsby'
-import Portfolio from './portfolio'
-import About from './about'
-
 
 const Sidebar = ({ data }) => {
     const title = data.title;
