@@ -6,7 +6,7 @@ import { DiscussionEmbed } from 'disqus-react';
 import { documentToReactComponents } from '@contentful/rich-text-react-renderer';
 import { BLOCKS } from '@contentful/rich-text-types';
 import { Link, graphql } from 'gatsby';
-import { FaSignLanguage } from 'react-icons/fa';
+/*import { FaSignLanguage } from 'react-icons/fa';*/
 
 function ArticleContent(props) {
 
@@ -44,7 +44,7 @@ function ArticleContent(props) {
     //the discuss 
     const disqusConfig = {
         shortname: process.env.GATSBY_DISQUS_NAME,
-        config: { identifier: title },
+        config: { identifier: slug, title },
     }
 
     //For Better TimeStamp
@@ -120,7 +120,7 @@ function ArticleContent(props) {
                 </div>
                 <div>
                     Tags
-                    {/* <TagList data={tag} /> */}
+                     <TagList data={tag} />
                     <br />
                     <br />
                     <span className="font-italic h5">Published {getTimestamp(timeStamp)} </span>

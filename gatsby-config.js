@@ -34,6 +34,8 @@ module.exports = {
         icon: `src/images/avataaars.png`, // This path is relative to the root of the site.
       },
     },
+
+
     {
       resolve: `gatsby-source-contentful`,
       options: {
