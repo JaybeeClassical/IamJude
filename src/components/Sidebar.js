@@ -21,17 +21,17 @@ const Sidebar = ({ data }) => {
             <p>{info}</p>
             <Link
                 className="btn btn-outline-info rounded-pill mx-2 my-2"
-                to="/about">
+                to="/404">
                 About
             </Link>
             <Link
                 className="btn btn-outline-info rounded-pill mx-2 my-2"
-                to="/portfolio">
+                to="/404">
                 Portfolio
             </Link>
             <Link
                 className="btn btn-outline-info rounded-pill mx-2 my-2"
-                to="/hire">
+                to="/404">
                 Hire me
             </Link>
             <SocialLinks socialLinks={socialLinks} />
