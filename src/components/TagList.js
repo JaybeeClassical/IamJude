@@ -1,7 +1,9 @@
 import React from 'react'
 import { Link } from 'gatsby'
 const TagList = ({ data }) => {
-    console.log(data)
+    if (!data || !data.length) {
+        return null;
+    }
     return <div className="my-2">
         {
             data.map(

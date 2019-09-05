@@ -15,7 +15,7 @@ function ArticleContent(props) {
     const title = props.pageContext.title
     const tag = props.data.contentfulArticle.tag
     const timeStamp = props.pageContext.timeStamp
-
+    console.log(props.data)
 
     //Creates a rich text document
     const richTextDocument = {
