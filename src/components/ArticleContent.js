@@ -50,7 +50,7 @@ function ArticleContent(props) {
     // }
     const disqusConfig = {
         shortname: process.env.GATSBY_DISQUS_NAME,
-        config: { identifier: title },
+        config: { identifier: slug, title },
     }
 
 
