@@ -1,7 +1,7 @@
 import React from 'react';
 import TagList from './TagList';
 import { Helmet } from 'react-helmet'
-// import { Disqus, CommentCount } from 'gatsby-plugin-disqus';
+import { DiscussionEmbed } from 'disqus-react';
 
 import { documentToReactComponents } from '@contentful/rich-text-react-renderer';
 import { BLOCKS } from '@contentful/rich-text-types';
@@ -41,13 +41,18 @@ function ArticleContent(props) {
         }
     };
 
-    // //the discuss 
+    //the discuss 
+    // const disqusShortName = 'process.env.GATSBY_DISQUS_NAME'
     // const disqusConfig = {
-    //     shortname: process.env.GATSBY_DISQUS_NAME,
-    //     url: `https://iamjude.xyz` + blogPost.slug,
-    //     identifier: post.id,
-    //     title: post.title,
+    //     identifier: article.markdownRemark.article, // you can define anything as "identifier" for each blog post
+    //     title: article.markdownRemark.frontmatter.title,
+    //     url: 'https://iamjude.xyz' + article.markdownRemark.frontmatter.path,
     // }
+    const disqusConfig = {
+        shortname: process.env.GATSBY_DISQUS_NAME,
+        config: { identifier: title },
+    }
+
 
     //For Better TimeStamp
     function getMonth(month) {
@@ -126,6 +131,7 @@ function ArticleContent(props) {
                     <br />
                     <br />
                     <span className="font-italic h5">Published {getTimestamp(timeStamp)} </span>
+                    <DiscussionEmbed {...disqusConfig} />
                 </div>
 
             </div>
