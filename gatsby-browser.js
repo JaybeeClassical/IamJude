@@ -6,6 +6,8 @@
 
 // You can delete this file if you're not using it
 // maybe i might use it, so i'm keeping it
+import '../IamJude/src/style.css'
+
 
 export const onServiceWorkerUpdateReady = () => {
     const answer = window.confirm(
