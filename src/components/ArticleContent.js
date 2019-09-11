@@ -15,6 +15,7 @@ function ArticleContent(props) {
     const title = props.pageContext.title
     const tag = props.data.contentfulArticle.tag
     const timeStamp = props.pageContext.timeStamp
+    const slug = props.pageContext.slug
     console.log(props.data)
 
     //Creates a rich text document
@@ -50,7 +51,7 @@ function ArticleContent(props) {
     // }
     const disqusConfig = {
         shortname: process.env.GATSBY_DISQUS_NAME,
-        config: { identifier: title },
+        config: { identifier: slug, title },
     }
 
 
