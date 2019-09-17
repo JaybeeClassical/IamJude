@@ -53,7 +53,7 @@ function ArticleContent(props) {
         shortname: process.env.GATSBY_DISQUS_NAME,
         config: { identifier: slug, title },
     }
-
+    console.log(process.env.GATSBY_DISQUS_NAME)
 
     //For Better TimeStamp
     function getMonth(month) {

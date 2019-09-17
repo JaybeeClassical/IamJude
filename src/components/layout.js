@@ -11,7 +11,8 @@ function Layout({ children }) {
             "github": "https://github.com/JaybeeClassical",
             "meduim": "https://medium.com/@johnboscoobiejesi",
             "gmail": "https://mail.google.com/mail/u/0/#inbox",
-            "stackoverflow": "https://stackoverflow.com/users/10690238/jude-obiejesi"
+            "stackoverflow": "https://stackoverflow.com/users/10690238/jude-obiejesi",
+            "dev": "https://dev.to/jude_johnbosco"
         }
     }
     return (
