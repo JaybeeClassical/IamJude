@@ -21,7 +21,7 @@ function ArticleContent(props) {
     //Creates a rich text document
     const richTextDocument = {
         nodeType: 'document',
-        data: {},
+        data: {},     
         content: [
             ...documentJson //adds the content to the document
         ]

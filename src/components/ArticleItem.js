@@ -1,6 +1,11 @@
 import React from 'react'
 import { Link } from 'gatsby';
+import { CommentCount } from 'disqus-react';
 
+export const disqusConfig = ({ slug, title }) => ({
+    shortname: process.env.GATSBY_DISQUS_NAME,
+    config: { identifier: slug, title },
+})
 
 const ArticleItem = ({ title, description, slug }) => {
 
@@ -14,7 +19,9 @@ const ArticleItem = ({ title, description, slug }) => {
                 <h2>{title}</h2>
             </Link>
             <p>{description}</p>
-            <span><img src={commentIcon} alt="Comment Icon" className="mr-2" /> Comments</span>
+            <span><img src={commentIcon} alt="Comment Icon" className="mr-2" />
+                <CommentCount {...disqusConfig({ slug, title })} />
+            </span>
             <hr className="bg-info" />
         </div>
     )
