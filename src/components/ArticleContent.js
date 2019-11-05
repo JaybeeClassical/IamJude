@@ -6,6 +6,7 @@ import { DiscussionEmbed } from 'disqus-react';
 import { documentToReactComponents } from '@contentful/rich-text-react-renderer';
 import { BLOCKS } from '@contentful/rich-text-types';
 import { Link, graphql } from 'gatsby';
+import Subscribe from './mailChimpEmail';
 /*import { FaSignLanguage } from 'react-icons/fa';*/
 
 function ArticleContent(props) {
@@ -21,7 +22,7 @@ function ArticleContent(props) {
     //Creates a rich text document
     const richTextDocument = {
         nodeType: 'document',
-        data: {},     
+        data: {},
         content: [
             ...documentJson //adds the content to the document
         ]
@@ -133,6 +134,7 @@ function ArticleContent(props) {
                     <br />
                     <span className="font-italic h5">Published {getTimestamp(timeStamp)} </span>
                     <DiscussionEmbed {...disqusConfig} />
+                    <Subscribe />
                 </div>
 
             </div>

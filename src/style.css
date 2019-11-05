@@ -91,6 +91,59 @@ body p {
     }
 }
 
+/* This is styling for the Newsletter Subscription Form*/
+.subscribe form {
+    margin: auto;
+    max-width: 500px;
+}
+
+.subscribe form input {
+    width: 100%;
+    padding: 10px;
+    margin: auto;
+    border-radius: 25px;
+    background: rgba(85, 95, 95, 0.1);
+    box-shadow: none;
+    transition: all 0.3s;
+    color: #FFF;
+}
+
+.subscribe form input::placeholder{
+    color: rgb(232, 238, 234);
+}
+
+.subscribe form input:focus {
+    box-shadow: none !important;
+    outline: none;
+}
+
+.subscribe form button {
+    width: 100%;
+    padding: 10px;
+    background: #315757;
+    border-radius: 25px;
+    cursor: pointer;
+    color: white;
+    font-weight: bold;
+    opacity: 0.9;
+    transition: all 0.3s;
+}
+
+.subscribe form button:hover {
+    background: #FFF;
+    color: black;
+}
+
+.subscribe form button:focus {
+    outline: none !important;
+    border: none !important;
+    -webkit-box-shadow: none !important;
+    -moz-box-shadow: none !important;
+    box-shadow: none !important
+}
+
+
+
 
 /*This is style from codepen for 404page*/
 .error-page-wrap {

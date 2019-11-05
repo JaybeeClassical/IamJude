@@ -1,5 +1,7 @@
 import React from 'react'
 import Sidebar from './Sidebar'
+import Subscribe from './mailChimpEmail';
+
 
 function Layout({ children }) {
     const data = {
@@ -27,8 +29,11 @@ function Layout({ children }) {
                     </div>
                 </div>
             </div>
+
+            <Subscribe />
         </div >
     )
 }
 
 export default Layout
+
