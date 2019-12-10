@@ -9,6 +9,20 @@ module.exports = {
     title: `Front-end Developer`,
     description: `This is the official portfolio and blog site of Obiejesi Chinweike`,
     author: `Chinweike Jude Obiejesi`,
+    Url: `https://www.iamjude.xyz/`,
+    keywords: [
+      "Obiejesi",
+      "Chinweike",
+      "Jude",
+      "Tech Content Writer",
+      "React developer",
+      "Front-end Engineer",
+    ],
+    social: {
+      twitter: `chinweike_dev`,
+      github: `jaybeeClassical`,
+      email: `johnboscoobiejesi@gmail.com`,
+    },
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
@@ -19,6 +33,31 @@ module.exports = {
         path: `${__dirname}/src/images`,
       },
     },
+    {
+      resolve: `gatsby-plugin-robots-txt`,
+      options: {
+        host: 'https://www.iamjude.xyz',
+        sitemap: 'https://www.iamjude.xyz/sitemap.xml',
+        policy: [{
+          userAgent: "*", allow: "/",
+        }],
+      },
+    },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        path: `${__dirname}/content/assets`,
+        name: `assets`,
+      },
+    },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        path: `${__dirname}/content/works`,
+        name: `works`,
+      },
+    },
+
     `gatsby-plugin-offline`,
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
@@ -58,6 +97,69 @@ module.exports = {
       options: {
         shortname: `iamjude.xyz`
       }
+    },
+
+    {
+      resolve: `gatsby-plugin-feed`,
+      options: {
+        query: `
+          {
+            site {
+              siteMetadata {
+                title
+                description
+                siteUrl
+                site_url: siteUrl
+              }
+            }
+          }
+        `,
+        feeds: [
+          {
+            serialize: ({ query: { site, allMarkdownRemark } }) => {
+              return allMarkdownRemark.edges.map(edge => {
+                if (edge.node.frontmatter.type === "work" || (edge.node.frontmatter.type === "post" && !edge.node.frontmatter.published)) return; // do no include WORK markdown and unpublished article to rss
+                return Object.assign({}, edge.node.frontmatter, {
+                  description: edge.node.frontmatter.description,
+                  date: edge.node.frontmatter.date,
+                  url: site.siteMetadata.siteUrl + '/post/' + edge.node.fields.slug,
+                  guid: site.siteMetadata.siteUrl + '/post/' + edge.node.fields.slug,
+                  custom_elements: [{ "content:encoded": edge.node.html }],
+                })
+              })
+            },
+            query: `
+              {
+                allMarkdownRemark(
+                  sort: { order: DESC, fields: [frontmatter___date] },
+                ) {
+                  edges {
+                    node {
+                      excerpt
+                      html
+                      fields { slug }
+                      frontmatter {
+                        title
+                        date
+                        type
+                        published
+                        description
+                      }
+                    }
+                  }
+                }
+              }
+            `,
+            output: "/rss.xml",
+            title: "Your Site's RSS Feed",
+            // optional configuration to insert feed reference in pages:
+            // if `string` is used, it will be used to create RegExp and then test if pathname of
+            // current page satisfied this regular expression;
+            // if not provided or `undefined`, all pages will have feed reference inserted
+            match: "^/blog/",
+          },
+        ],
+      },
     },
 
   ],

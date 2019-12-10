@@ -43,13 +43,6 @@ function ArticleContent(props) {
         }
     };
 
-    //the discuss 
-    // const disqusShortName = 'process.env.GATSBY_DISQUS_NAME'
-    // const disqusConfig = {
-    //     identifier: article.markdownRemark.article, // you can define anything as "identifier" for each blog post
-    //     title: article.markdownRemark.frontmatter.title,
-    //     url: 'https://iamjude.xyz' + article.markdownRemark.frontmatter.path,
-    // }
     const disqusConfig = {
         shortname: process.env.GATSBY_DISQUS_NAME,
         config: { identifier: slug, title },
@@ -113,7 +106,7 @@ function ArticleContent(props) {
     return (
         <div>
             <Link
-                className="btn btn-outline-light rounded-pill mx-5 my-3"
+                className="btn btn-primary rounded-pill mx-5 my-3"
                 to="/">
                 Back to Home
             </Link>
