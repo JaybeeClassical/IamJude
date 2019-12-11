@@ -3,13 +3,19 @@ const dotenv = require('dotenv')
 if (process.env.NODE_ENV !== 'production') {
   dotenv.config()
 }
+module.exports = {
+  siteMetadata: {
+    siteUrl: `https://www.example.com`,
+  },
+  plugins: [],
+}
 
 module.exports = {
   siteMetadata: {
     title: `Front-end Developer`,
     description: `This is the official portfolio and blog site of Obiejesi Chinweike`,
     author: `Chinweike Jude Obiejesi`,
-    Url: `https://www.iamjude.xyz/`,
+    siteUrl: `https://www.iamjude.xyz/`,
     keywords: [
       "Obiejesi",
       "Chinweike",
@@ -61,6 +67,7 @@ module.exports = {
     `gatsby-plugin-offline`,
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
+    `gatsby-plugin-feed`,
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
@@ -118,12 +125,11 @@ module.exports = {
           {
             serialize: ({ query: { site, allMarkdownRemark } }) => {
               return allMarkdownRemark.edges.map(edge => {
-                if (edge.node.frontmatter.type === "work" || (edge.node.frontmatter.type === "post" && !edge.node.frontmatter.published)) return; // do no include WORK markdown and unpublished article to rss
                 return Object.assign({}, edge.node.frontmatter, {
-                  description: edge.node.frontmatter.description,
+                  description: edge.node.excerpt,
                   date: edge.node.frontmatter.date,
-                  url: site.siteMetadata.siteUrl + '/post/' + edge.node.fields.slug,
-                  guid: site.siteMetadata.siteUrl + '/post/' + edge.node.fields.slug,
+                  url: site.siteMetadata.siteUrl + edge.node.fields.slug,
+                  guid: site.siteMetadata.siteUrl + edge.node.fields.slug,
                   custom_elements: [{ "content:encoded": edge.node.html }],
                 })
               })
@@ -141,9 +147,6 @@ module.exports = {
                       frontmatter {
                         title
                         date
-                        type
-                        published
-                        description
                       }
                     }
                   }
@@ -152,15 +155,9 @@ module.exports = {
             `,
             output: "/rss.xml",
             title: "Your Site's RSS Feed",
-            // optional configuration to insert feed reference in pages:
-            // if `string` is used, it will be used to create RegExp and then test if pathname of
-            // current page satisfied this regular expression;
-            // if not provided or `undefined`, all pages will have feed reference inserted
-            match: "^/blog/",
           },
         ],
       },
     },
-
   ],
 }
