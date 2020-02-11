@@ -2,6 +2,7 @@ import React from "react"
 import { Form, Button, Col } from "react-bootstrap"
 import { Link } from "gatsby"
 import Subscribe from "../components/mailChimpEmail"
+import ReCAPTCHA from "react-google-recaptcha"
 
 function Hire() {
   return (
@@ -19,6 +20,7 @@ function Hire() {
         <Form
           name="contact"
           method="POST"
+          data-netlify-recaptcha="true"
           data-netlify="true"
           className="shadow-lg p-5 mb-5 bg-white rounded"
         >
@@ -55,14 +57,7 @@ function Hire() {
             />
           </Form.Group>
 
-          {/* <Form.Group id="formGridCheckbox">
-            <Form.Check
-              type="checkbox"
-              label="I'm not a robot"
-              data-netlify-recaptcha="true"
-            />
-          </Form.Group> */}
-
+          <ReCAPTCHA sitekey={process.env.GATSBY_RECAPTCHA_KEY} />
           <Button variant="outline-dark" type="submit" className="text-center">
             <i className="fa fa-paper-plane"></i> Send
           </Button>
