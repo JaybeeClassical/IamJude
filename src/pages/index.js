@@ -2,6 +2,7 @@ import React from 'react'
 import Layout from '../components/layout'
 import ArticleList from '../components/ArticleList'
 import { Helmet } from 'react-helmet'
+import SEO from '../components/seo'
 
 import '../style.css'
 import 'bootstrap/dist/css/bootstrap.css'
@@ -11,6 +12,7 @@ function index({ data }) {
   const articles = data.allContentfulArticle.edges
   return (
     <div>
+      <SEO title="Home" />
       <Helmet>
         <title>Chinweike Jude Obiejesi</title>
       </Helmet>
@@ -21,7 +23,7 @@ function index({ data }) {
   )
 }
 
-export default index
+export default index;
 
 export const pageQuery = graphql`
 {

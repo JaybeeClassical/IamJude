@@ -7,6 +7,8 @@
 // You can delete this file if you're not using it
 // maybe i might use it, so i'm keeping it
 import "./src/style.css"
+import "./node_modules/bootstrap/dist/css/bootstrap.css";
+import "./node_modules/font-awesome/css/font-awesome.min.css";
 
 
 export const onServiceWorkerUpdateReady = () => {
