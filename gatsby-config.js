@@ -1,6 +1,6 @@
-const dotenv = require('dotenv')
+const dotenv = require("dotenv")
 
-if (process.env.NODE_ENV !== 'production') {
+if (process.env.NODE_ENV !== "production") {
   dotenv.config()
 }
 module.exports = {
@@ -15,7 +15,7 @@ module.exports = {
     title: `Front-end Developer`,
     description: `This is the official portfolio and blog site of Obiejesi Chinweike`,
     author: `Chinweike Jude Obiejesi`,
-    siteUrl: `https://www.iamjude.xyz/`,
+    siteUrl: `https://www.iamjude.xyz`,
     keywords: [
       "Obiejesi",
       "Chinweike",
@@ -32,6 +32,7 @@ module.exports = {
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
+    `gatsby-plugin-advanced-sitemap`,
     {
       resolve: `gatsby-source-filesystem`,
       options: {
@@ -42,11 +43,14 @@ module.exports = {
     {
       resolve: `gatsby-plugin-robots-txt`,
       options: {
-        host: 'https://www.iamjude.xyz',
-        sitemap: 'https://www.iamjude.xyz/sitemap.xml',
-        policy: [{
-          userAgent: "*", allow: "/",
-        }],
+        host: "https://www.iamjude.xyz",
+        sitemap: "https://www.iamjude.xyz/sitemap.xml",
+        policy: [
+          {
+            userAgent: "*",
+            allow: "/",
+          },
+        ],
       },
     },
     {
@@ -81,9 +85,10 @@ module.exports = {
     },
 
     {
-      resolve: 'gatsby-plugin-mailchimp',
+      resolve: "gatsby-plugin-mailchimp",
       options: {
-        endpoint: "https://techibytes.us19.list-manage.com/subscribe/post?u=f145cdcf5ab6541b1627ffb85&amp;id=cdea2ed04c",
+        endpoint:
+          "https://techibytes.us19.list-manage.com/subscribe/post?u=f145cdcf5ab6541b1627ffb85&amp;id=cdea2ed04c",
       },
     },
 
@@ -96,14 +101,12 @@ module.exports = {
     },
     // `@contentful/rich-text-react-renderer`
 
-
     // `Disqus plugin`
     {
       resolve: `gatsby-plugin-disqus`,
       options: {
-        shortname: `iamjude.xyz`
-      }
+        shortname: `iamjude.xyz`,
+      },
     },
-
   ],
 }
