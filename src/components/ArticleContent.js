@@ -7,7 +7,6 @@ import { documentToReactComponents } from '@contentful/rich-text-react-renderer'
 import { BLOCKS } from '@contentful/rich-text-types';
 import { Link, graphql } from 'gatsby';
 import Subscribe from './mailChimpEmail';
-/*import { FaSignLanguage } from 'react-icons/fa';*/
 
 function ArticleContent(props) {
 
@@ -47,7 +46,6 @@ function ArticleContent(props) {
         shortname: process.env.GATSBY_DISQUS_NAME,
         config: { identifier: slug, title },
     }
-    console.log(process.env.GATSBY_DISQUS_NAME)
 
     //For Better TimeStamp
     function getMonth(month) {
