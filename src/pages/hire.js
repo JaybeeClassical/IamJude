@@ -35,15 +35,12 @@ function Hire() {
               </Col>
             </Form.Row>
           </Form.Group>
-
           <Form.Group controlId="formBasicEmail">
             <Form.Control type="email" name="email" placeholder="Enter email" />
           </Form.Group>
-
           <Form.Group controlId="formFile">
             <Form.Control type="file" />
           </Form.Group>
-
           <Form.Group controlId="exampleForm.ControlTextarea1">
             <Form.Label>
               Send your message right here and i will get back
@@ -56,8 +53,8 @@ function Hire() {
               placeholder="shoot me this message.  ):"
             />
           </Form.Group>
-
           <ReCAPTCHA sitekey={process.env.GATSBY_RECAPTCHA_KEY} />
+
           <Button variant="outline-dark" type="submit" className="text-center">
             <i className="fa fa-paper-plane"></i> Send
           </Button>
