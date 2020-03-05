@@ -54,7 +54,6 @@ function Hire() {
             />
           </Form.Group>
           <ReCAPTCHA sitekey={process.env.GATSBY_RECAPTCHA_KEY} />
-
           <Button variant="outline-dark" type="submit" className="text-center">
             <i className="fa fa-paper-plane"></i> Send
           </Button>
