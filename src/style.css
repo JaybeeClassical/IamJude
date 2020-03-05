@@ -1,268 +1,398 @@
-@import url('https://fonts.googleapis.com/css?family=Noto+Sans:400,700&display=swap');
+@import url("https://fonts.googleapis.com/css?family=Noto+Sans:400,700&display=swap");
 html body {
-    padding: 0;
-    margin: 0;
-    font-family: 'Noto Sans', sans-serif;
-    background-color: #263238
+  padding: 0;
+  margin: 0;
+  font-family: "Noto Sans", sans-serif;
+  background-color: #263238;
 }
 
 body p {
-    color: rgb(232, 241, 240)
+  color: rgb(232, 241, 240);
 }
 
 .sidebar {
-    text-align: center;
-    justify-content: center;
+  text-align: center;
+  justify-content: center;
 }
-
 
 .sidebar h2 {
-    font-weight: 700;
-    color: rgb(107, 216, 207);
-    text-align: center;
+  font-weight: 700;
+  color: rgb(107, 216, 207);
+  text-align: center;
 }
 
-
 .profile-img {
-    border: 5px solid #FFF;
-    margin-left: 30px;
+  border: 5px solid #fff;
+  margin-left: 30px;
 }
 
 .icon {
-    font-size: 30px;
-    color: rgb(107, 216, 207);
-    margin-right: 20px
+  font-size: 30px;
+  color: rgb(107, 216, 207);
+  margin-right: 20px;
 }
 
 .icon:hover {
-    color: rgb(204, 207, 209)
+  color: rgb(204, 207, 209);
 }
 
 .articles {
-    margin-left: 80px;
-    color: rgb(87, 134, 130)
+  margin-left: 80px;
+  color: rgb(87, 134, 130);
 }
 
 .article-item h2 {
-    color: rgb(129, 175, 164);
+  color: rgb(129, 175, 164);
 }
 
 .link:hover {
-    color: #FFCB6B;
-    text-decoration-color: rgb(128, 121, 109) !important
+  color: #ffcb6b;
+  text-decoration-color: rgb(128, 121, 109) !important;
 }
 
 .tag {
-    background-color: #80CBC4 !important;
-    padding: 5px !important;
+  background-color: #80cbc4 !important;
+  padding: 5px !important;
 }
 
 .article-content {
-    color: rgb(107, 216, 207);
-    margin-left: 300px;
-    margin-right: 300px;
-    padding: 10px
+  color: rgb(107, 216, 207);
+  margin-left: 300px;
+  margin-right: 300px;
+  padding: 10px;
 }
 
-.article-content p{
-    font-size: 700;
+.article-content p {
+  font-size: 700;
 }
 
 .NotExistingPage {
-    text-align: center;
+  text-align: center;
 }
 
 @media only screen and (max-width: 600px) {
-    .profile-img {
-        margin-left: 40px;
-    }
+  .profile-img {
+    margin: 0 auto;
+  }
 
-    .icon{
-        margin-left: 10px;
-    }
+  .icon {
+    margin-left: 10px;
+  }
 
-    .articles {
-        margin: 10px;
-        color: #80CBC4;
-    }
-    .article-content{
-        margin: 10px; 
-        padding: 0px;
-    }
+  .articles {
+    margin: 10px;
+    color: #80cbc4;
+  }
+  .article-content {
+    margin: 10px;
+    padding: 0px;
+  }
+
+  iframe {
+    width: 170px;
+    height: 78px;
+  }
 }
 
 /* This is styling for the Newsletter Subscription Form*/
 .subscribe form {
-    margin: auto;
-    max-width: 500px;
+  margin: auto;
+  max-width: 500px;
 }
 
 .subscribe form input {
-    width: 100%;
-    padding: 10px;
-    margin: auto;
-    border-radius: 25px;
-    background: rgba(85, 95, 95, 0.1);
-    box-shadow: none;
-    transition: all 0.3s;
-    color: #FFF;
+  width: 100%;
+  padding: 10px;
+  margin: auto;
+  border-radius: 25px;
+  background: rgba(85, 95, 95, 0.1);
+  box-shadow: none;
+  transition: all 0.3s;
+  color: #fff;
 }
 
-.subscribe form input::placeholder{
-    color: rgb(232, 238, 234);
+.subscribe form input::placeholder {
+  color: rgb(232, 238, 234);
 }
 
 .subscribe form input:focus {
-    box-shadow: none !important;
-    outline: none;
+  box-shadow: none !important;
+  outline: none;
 }
 
 .subscribe form button {
-    width: 100%;
-    padding: 10px;
-    background: #315757;
-    border-radius: 25px;
-    cursor: pointer;
-    color: white;
-    font-weight: bold;
-    opacity: 0.9;
-    transition: all 0.3s;
+  width: 100%;
+  padding: 10px;
+  background: #315757;
+  border-radius: 25px;
+  cursor: pointer;
+  color: white;
+  font-weight: bold;
+  opacity: 0.9;
+  transition: all 0.3s;
 }
 
 .subscribe form button:hover {
-    background: #FFF;
-    color: black;
+  background: #fff;
+  color: black;
 }
 
 .subscribe form button:focus {
-    outline: none !important;
-    border: none !important;
-    -webkit-box-shadow: none !important;
-    -moz-box-shadow: none !important;
-    box-shadow: none !important
+  outline: none !important;
+  border: none !important;
+  -webkit-box-shadow: none !important;
+  -moz-box-shadow: none !important;
+  box-shadow: none !important;
 }
-
-
-
 
 /*This is style from codepen for 404page*/
 .error-page-wrap {
-    width: 310px;
-    height: 310px;
-    margin: 155px auto; }
-    .error-page-wrap:before {
-      box-shadow: 0 0 200px 150px #fff;
-      width: 310px;
-      height: 310px;
-      border-radius: 50%;
-      position: relative;
-      z-index: -1;
-      content: '';
-      display: block; }
-  
-  .error-page {
-    width: 310px;
-    height: 310px;
-    border-radius: 50%;
-    top: -310px;
-    position: relative;
-    text-align: center;
-    background: #d36242;
-    background: -moz-linear-gradient(top, #d36242 0%, rgb(175, 88, 88) 100%);
-    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #d36242), color-stop(100%, rgb(57, 183, 187)));
-    background: -webkit-linear-gradient(top, #d36242 0%, rgb(59, 192, 192) 100%);
-    background: -o-linear-gradient(top, #d36242 0%, rgb(59, 192, 192) 100%);
-    background: -ms-linear-gradient(top, #d36242 0%, rgb(59, 192, 192) 100%);
-    background: linear-gradient(to bottom, #d36242 0%, rgb(59, 192, 192) 100%);
-    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='$firstColor', endColorstr='$secondColor',GradientType=0 ); }
-    .error-page:before {
-      width: 63px;
-      height: 63px;
-      border-radius: 50%;
-      box-shadow: 3px 25px 0 5px #C95439;
-      content: '';
-      z-index: -1;
-      display: block;
-      position: relative;
-      top: -19px;
-      left: 44px; }
-    .error-page:after {
-      width: 310px;
-      height: 17px;
-      margin: 0 auto;
-      top: 25px;
-      content: '';
-      z-index: -1;
-      display: block;
-      position: relative;
-      background: -moz-radial-gradient(center, ellipse cover, rgba(0, 0, 0, 0.65) 0%, rgba(35, 26, 26, 0) 59%, rgba(60, 44, 44, 0) 100%);
-      background: -webkit-gradient(radial, center center, 0px, center center, 100%, color-stop(0%, rgba(0, 0, 0, 0.65)), color-stop(59%, rgba(35, 26, 26, 0)), color-stop(100%, rgba(60, 44, 44, 0)));
-      background: -webkit-radial-gradient(center, ellipse cover, rgba(0, 0, 0, 0.65) 0%, rgba(35, 26, 26, 0) 59%, rgba(60, 44, 44, 0) 100%);
-      background: -o-radial-gradient(center, ellipse cover, rgba(0, 0, 0, 0.65) 0%, rgba(35, 26, 26, 0) 59%, rgba(60, 44, 44, 0) 100%);
-      background: -ms-radial-gradient(center, ellipse cover, rgba(0, 0, 0, 0.65) 0%, rgba(35, 26, 26, 0) 59%, rgba(60, 44, 44, 0) 100%);
-      background: radial-gradient(ellipse at center, rgba(0, 0, 0, 0.65) 0%, rgba(35, 26, 26, 0) 59%, rgba(60, 44, 44, 0) 100%);
-      filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#a6000000', endColorstr='#003c2c2c',GradientType=1 ); }
-    .error-page h1 {
-      color: rgba(255, 255, 255, 0.94);
-      font-size: 100px;
-      margin: 65px auto 0 auto;
-      text-shadow: 0px 0 7px rgba(0, 0, 0, 0.5); }
-      .error-page h1:before {
-        width: 260px;
-        height: 1px;
-        position: relative;
-        margin: 0 auto;
-        top: 70px;
-        content: '';
-        display: block;
-        background: -moz-radial-gradient(center, ellipse cover, rgba(111, 25, 25, 0.65) 0%, rgba(75, 38, 38, 0) 70%, rgba(60, 44, 44, 0) 100%);
-        background: -webkit-gradient(radial, center center, 0px, center center, 100%, color-stop(0%, rgba(111, 25, 25, 0.65)), color-stop(70%, rgba(75, 38, 38, 0)), color-stop(100%, rgba(60, 44, 44, 0)));
-        background: -webkit-radial-gradient(center, ellipse cover, rgba(111, 25, 25, 0.65) 0%, rgba(75, 38, 38, 0) 70%, rgba(60, 44, 44, 0) 100%);
-        background: -o-radial-gradient(center, ellipse cover, rgba(111, 25, 25, 0.65) 0%, rgba(75, 38, 38, 0) 70%, rgba(60, 44, 44, 0) 100%);
-        background: -ms-radial-gradient(center, ellipse cover, rgba(111, 25, 25, 0.65) 0%, rgba(75, 38, 38, 0) 70%, rgba(60, 44, 44, 0) 100%);
-        background: radial-gradient(ellipse at center, rgba(111, 25, 25, 0.65) 0%, rgba(75, 38, 38, 0) 70%, rgba(60, 44, 44, 0) 100%);
-        filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#a66f1919', endColorstr='#003c2c2c',GradientType=1 ); }
-      .error-page h1:after {
-        width: 260px;
-        height: 1px;
-        content: '';
-        display: block;
-        opacity: 0.2;
-        margin: 0 auto;
-        top: 50px;
-        position: relative;
-        background: -moz-radial-gradient(center, ellipse cover, rgba(247, 173, 148, 0.65) 0%, rgba(255, 255, 255, 0.01) 99%, rgba(255, 255, 255, 0) 100%);
-        background: -webkit-gradient(radial, center center, 0px, center center, 100%, color-stop(0%, rgba(247, 173, 148, 0.65)), color-stop(99%, rgba(255, 255, 255, 0.01)), color-stop(100%, rgba(255, 255, 255, 0)));
-        background: -webkit-radial-gradient(center, ellipse cover, rgba(247, 173, 148, 0.65) 0%, rgba(255, 255, 255, 0.01) 99%, rgba(255, 255, 255, 0) 100%);
-        background: -o-radial-gradient(center, ellipse cover, rgba(247, 173, 148, 0.65) 0%, rgba(255, 255, 255, 0.01) 99%, rgba(255, 255, 255, 0) 100%);
-        background: -ms-radial-gradient(center, ellipse cover, rgba(247, 173, 148, 0.65) 0%, rgba(255, 255, 255, 0.01) 99%, rgba(255, 255, 255, 0) 100%);
-        background: radial-gradient(ellipse at center, rgba(247, 173, 148, 0.65) 0%, rgba(255, 255, 255, 0.01) 99%, rgba(255, 255, 255, 0) 100%);
-        filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#a6f7ad94', endColorstr='#00ffffff',GradientType=1 ); }
-    .error-page h2 {
-      margin: 55px 0 30px 0;
-      font-size: 17px; }
-      .error-page h2:before {
-        width: 130px;
-        height: 10px;
-        position: relative;
-        margin: 0 auto;
-        top: 31px;
-      }
-      .error-page h2:after {
-        width: 130px;
-        height: 1px;
-        content: '';
-        display: block;
-        opacity: 0.2;
-        margin: 0 auto;
-        top: 11px;
-        position: relative;
-      }
-  .error-back {
-    text-decoration: wavy;
-    color: #430400;
-    font-size: 50px; }
-    .error-back:hover {
-      color: #EB957D;
-      text-shadow: 0 0 3px black;
-    }
+  width: 310px;
+  height: 310px;
+  margin: 155px auto;
+}
+.error-page-wrap:before {
+  box-shadow: 0 0 200px 150px #fff;
+  width: 310px;
+  height: 310px;
+  border-radius: 50%;
+  position: relative;
+  z-index: -1;
+  content: "";
+  display: block;
+}
+
+.error-page {
+  width: 310px;
+  height: 310px;
+  border-radius: 50%;
+  top: -310px;
+  position: relative;
+  text-align: center;
+  background: #d36242;
+  background: -moz-linear-gradient(top, #d36242 0%, rgb(175, 88, 88) 100%);
+  background: -webkit-gradient(
+    linear,
+    left top,
+    left bottom,
+    color-stop(0%, #d36242),
+    color-stop(100%, rgb(57, 183, 187))
+  );
+  background: -webkit-linear-gradient(top, #d36242 0%, rgb(59, 192, 192) 100%);
+  background: -o-linear-gradient(top, #d36242 0%, rgb(59, 192, 192) 100%);
+  background: -ms-linear-gradient(top, #d36242 0%, rgb(59, 192, 192) 100%);
+  background: linear-gradient(to bottom, #d36242 0%, rgb(59, 192, 192) 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='$firstColor', endColorstr='$secondColor',GradientType=0 );
+}
+.error-page:before {
+  width: 63px;
+  height: 63px;
+  border-radius: 50%;
+  box-shadow: 3px 25px 0 5px #c95439;
+  content: "";
+  z-index: -1;
+  display: block;
+  position: relative;
+  top: -19px;
+  left: 44px;
+}
+.error-page:after {
+  width: 310px;
+  height: 17px;
+  margin: 0 auto;
+  top: 25px;
+  content: "";
+  z-index: -1;
+  display: block;
+  position: relative;
+  background: -moz-radial-gradient(
+    center,
+    ellipse cover,
+    rgba(0, 0, 0, 0.65) 0%,
+    rgba(35, 26, 26, 0) 59%,
+    rgba(60, 44, 44, 0) 100%
+  );
+  background: -webkit-gradient(
+    radial,
+    center center,
+    0px,
+    center center,
+    100%,
+    color-stop(0%, rgba(0, 0, 0, 0.65)),
+    color-stop(59%, rgba(35, 26, 26, 0)),
+    color-stop(100%, rgba(60, 44, 44, 0))
+  );
+  background: -webkit-radial-gradient(
+    center,
+    ellipse cover,
+    rgba(0, 0, 0, 0.65) 0%,
+    rgba(35, 26, 26, 0) 59%,
+    rgba(60, 44, 44, 0) 100%
+  );
+  background: -o-radial-gradient(
+    center,
+    ellipse cover,
+    rgba(0, 0, 0, 0.65) 0%,
+    rgba(35, 26, 26, 0) 59%,
+    rgba(60, 44, 44, 0) 100%
+  );
+  background: -ms-radial-gradient(
+    center,
+    ellipse cover,
+    rgba(0, 0, 0, 0.65) 0%,
+    rgba(35, 26, 26, 0) 59%,
+    rgba(60, 44, 44, 0) 100%
+  );
+  background: radial-gradient(
+    ellipse at center,
+    rgba(0, 0, 0, 0.65) 0%,
+    rgba(35, 26, 26, 0) 59%,
+    rgba(60, 44, 44, 0) 100%
+  );
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#a6000000', endColorstr='#003c2c2c',GradientType=1 );
+}
+.error-page h1 {
+  color: rgba(255, 255, 255, 0.94);
+  font-size: 100px;
+  margin: 65px auto 0 auto;
+  text-shadow: 0px 0 7px rgba(0, 0, 0, 0.5);
+}
+.error-page h1:before {
+  width: 260px;
+  height: 1px;
+  position: relative;
+  margin: 0 auto;
+  top: 70px;
+  content: "";
+  display: block;
+  background: -moz-radial-gradient(
+    center,
+    ellipse cover,
+    rgba(111, 25, 25, 0.65) 0%,
+    rgba(75, 38, 38, 0) 70%,
+    rgba(60, 44, 44, 0) 100%
+  );
+  background: -webkit-gradient(
+    radial,
+    center center,
+    0px,
+    center center,
+    100%,
+    color-stop(0%, rgba(111, 25, 25, 0.65)),
+    color-stop(70%, rgba(75, 38, 38, 0)),
+    color-stop(100%, rgba(60, 44, 44, 0))
+  );
+  background: -webkit-radial-gradient(
+    center,
+    ellipse cover,
+    rgba(111, 25, 25, 0.65) 0%,
+    rgba(75, 38, 38, 0) 70%,
+    rgba(60, 44, 44, 0) 100%
+  );
+  background: -o-radial-gradient(
+    center,
+    ellipse cover,
+    rgba(111, 25, 25, 0.65) 0%,
+    rgba(75, 38, 38, 0) 70%,
+    rgba(60, 44, 44, 0) 100%
+  );
+  background: -ms-radial-gradient(
+    center,
+    ellipse cover,
+    rgba(111, 25, 25, 0.65) 0%,
+    rgba(75, 38, 38, 0) 70%,
+    rgba(60, 44, 44, 0) 100%
+  );
+  background: radial-gradient(
+    ellipse at center,
+    rgba(111, 25, 25, 0.65) 0%,
+    rgba(75, 38, 38, 0) 70%,
+    rgba(60, 44, 44, 0) 100%
+  );
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#a66f1919', endColorstr='#003c2c2c',GradientType=1 );
+}
+.error-page h1:after {
+  width: 260px;
+  height: 1px;
+  content: "";
+  display: block;
+  opacity: 0.2;
+  margin: 0 auto;
+  top: 50px;
+  position: relative;
+  background: -moz-radial-gradient(
+    center,
+    ellipse cover,
+    rgba(247, 173, 148, 0.65) 0%,
+    rgba(255, 255, 255, 0.01) 99%,
+    rgba(255, 255, 255, 0) 100%
+  );
+  background: -webkit-gradient(
+    radial,
+    center center,
+    0px,
+    center center,
+    100%,
+    color-stop(0%, rgba(247, 173, 148, 0.65)),
+    color-stop(99%, rgba(255, 255, 255, 0.01)),
+    color-stop(100%, rgba(255, 255, 255, 0))
+  );
+  background: -webkit-radial-gradient(
+    center,
+    ellipse cover,
+    rgba(247, 173, 148, 0.65) 0%,
+    rgba(255, 255, 255, 0.01) 99%,
+    rgba(255, 255, 255, 0) 100%
+  );
+  background: -o-radial-gradient(
+    center,
+    ellipse cover,
+    rgba(247, 173, 148, 0.65) 0%,
+    rgba(255, 255, 255, 0.01) 99%,
+    rgba(255, 255, 255, 0) 100%
+  );
+  background: -ms-radial-gradient(
+    center,
+    ellipse cover,
+    rgba(247, 173, 148, 0.65) 0%,
+    rgba(255, 255, 255, 0.01) 99%,
+    rgba(255, 255, 255, 0) 100%
+  );
+  background: radial-gradient(
+    ellipse at center,
+    rgba(247, 173, 148, 0.65) 0%,
+    rgba(255, 255, 255, 0.01) 99%,
+    rgba(255, 255, 255, 0) 100%
+  );
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#a6f7ad94', endColorstr='#00ffffff',GradientType=1 );
+}
+.error-page h2 {
+  margin: 55px 0 30px 0;
+  font-size: 17px;
+}
+.error-page h2:before {
+  width: 130px;
+  height: 10px;
+  position: relative;
+  margin: 0 auto;
+  top: 31px;
+}
+.error-page h2:after {
+  width: 130px;
+  height: 1px;
+  content: "";
+  display: block;
+  opacity: 0.2;
+  margin: 0 auto;
+  top: 11px;
+  position: relative;
+}
+.error-back {
+  text-decoration: wavy;
+  color: #430400;
+  font-size: 50px;
+}
+.error-back:hover {
+  color: #eb957d;
+  text-shadow: 0 0 3px black;
+}
