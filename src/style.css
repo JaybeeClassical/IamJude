@@ -70,7 +70,7 @@ body p {
   text-align: center;
 }
 
-@media only screen and (max-width: 600px) {
+@media screen and (max-width: 768px) {
   .profile-img {
     margin: 0 auto;
   }
