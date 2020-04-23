@@ -92,15 +92,12 @@ body p {
     width: 170px;
     height: 78px;
   }
-
-  .subscribe{
-    width: 60%;
-  }
 }
 
 /* This is styling for the Newsletter Subscription Form*/
 .subscribe {
-  margin: 170px 0px 60px;
+  width: 80%;
+  margin: 170px auto 60px;
 }
 
 .subscribe form {
