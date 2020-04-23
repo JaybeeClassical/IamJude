@@ -48,7 +48,7 @@ class Subscribe extends Component {
         let { statusMsg, subscribing } = this.state
         let btnCTA = subscribing ? "Subscribing" : "Subscribe"
         return (
-            <div className="subscribe text-center mt-5">
+            <div className="subscribe text-center">
                 <h5 style={{ color: "white" }}>Subscribe to my Newsletter and get my updated articles </h5>
                 <form onSubmit={this.handleSubmit}>
                     <div className="row text-center mx-auto">
