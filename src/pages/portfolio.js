@@ -48,7 +48,21 @@ function Portfolio() {
           </Card.Body>
         </Card>
 
-        {/* Another Card 3 */}
+        {/*  Another Card 3 */}
+        <Card style={{ width: '18rem', marginBottom: '1rem' }} className="text-center">
+          <Card.Body>
+            <Card.Title>Identity Stories</Card.Title>
+            <Card.Subtitle className="mb-2 text-muted">Wordpress, Elementor, CSS</Card.Subtitle>
+            <Card.Text className="text-dark">
+              Identity Stories, is a Non profit organisation which inspire lifes
+              of Africans especially Nigerians by telling stories.
+              </Card.Text>
+            {/* <Card.Link href="https://google.com" className="btn btn-outline fa fa-github"> Github</Card.Link> */}
+            <Card.Link href="https://identitystoriesng.com/" className="btn btn-outline fa fa-globe"> Link</Card.Link>
+          </Card.Body>
+        </Card>
+
+        {/* Another Card 4*/}
         <Card style={{ width: '18rem', marginBottom: '1rem' }} className="text-center">
           <Card.Body>
             <Card.Title>Dynamic Quiz App</Card.Title>
@@ -61,7 +75,7 @@ function Portfolio() {
           </Card.Body>
         </Card>
 
-        {/* Another Card 4 */}
+        {/* Another Card 5*/}
         <Card style={{ width: '18rem', marginBottom: '1rem' }} className="text-center">
           <Card.Body>
             <Card.Title>Weather App</Card.Title>
@@ -75,7 +89,7 @@ function Portfolio() {
           </Card.Body>
         </Card>
 
-        {/* Another Card 5*/}
+        {/* Another Card 6*/}
         <Card style={{ width: '18rem', marginBottom: '1rem' }} className="text-center">
           <Card.Body>
             <Card.Title>React Portfolio</Card.Title>
@@ -87,20 +101,6 @@ function Portfolio() {
             <Card.Link href="https://react-portfo.netlify.com/" className="btn btn-outline fa fa-globe"> Link</Card.Link>
           </Card.Body>
         </Card>
-
-        {/* Another Card 6 */}
-        {/* <Card style={{ width: '18rem', marginBottom: '1rem' }} className="text-center">
-            <Card.Body>
-              <Card.Title>Card Title</Card.Title>
-              <Card.Subtitle className="mb-2 text-muted">Card Subtitle</Card.Subtitle>
-              <Card.Text className="text-dark">
-                Some quick example text to build on the card title and make up the bulk of
-                the card's content.
-              </Card.Text>
-              <Card.Link href="https://google.com" className="btn btn-outline fa fa-github"> Github</Card.Link>
-              <Card.Link href="https://google.com" className="btn btn-outline fa fa-globe"> Link</Card.Link>
-            </Card.Body>
-          </Card> */}
 
         {/* Another Card 7 */}
         {/* <Card style={{ width: '18rem', marginBottom: '1rem' }} className="text-center">
